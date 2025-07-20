@@ -1,0 +1,25 @@
+🔸 Aufgabe 1: Pivot-Tabelle – Kreditbetrag pro Region
+Zeilen: Region
+
+Werte: Kreditbetrag_EUR (Summe)
+
+Ergebnis: Gesamt-Kreditvolumen je Region
+
+🔸 Aufgabe 2: Durchschnittliche Laufzeit pro Region
+Zeilen: Region
+
+Werte: Laufzeit_Jahre (Durchschnitt)
+
+Ziel: Welche Region hat die längsten Laufzeiten?
+
+🔸 Aufgabe 3: Kreditanzahl pro Region (Anzahl)
+Zeilen: Region
+
+Werte: Kunden_ID (Anzahl)
+
+Ziel: Wo wurden die meisten Kredite vergeben?
+
+🔸 Bonus: Bedingte Formatierung
+Markiere alle Zeilen, in denen Offener_Betrag_EUR > 100.000 € ist.
+
+Farbe: Hellrot oder Gelb (dein Stil)

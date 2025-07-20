@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="Kreditdaten_meldewesen_aufgaben.db" readonly="0" foreign_keys="0" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="0"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1246"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="0" parent="0"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="kredite" custom_title="0" dock_id="1" table="4,7:mainkredite"/><dock_state state="000000ff00000000fd00000001000000020000038200000342fc0100000001fb000000160064006f0063006b00420072006f00770073006500310100000000000003820000012600ffffff000002710000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="kredite" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="59"/><column index="2" value="60"/><column index="3" value="151"/><column index="4" value="84"/><column index="5" value="54"/><column index="7" value="87"/><column index="8" value="75"/><column index="9" value="78"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="Großkredite meldepflichtig nach AnaCredit*">--Fragestellung: Liste alle Kredite auf, die meldepflichtig sind und deren Kreditsumme über 1 Million € liegt.
+-- Kredite &gt; 1 Mio EUR unterliegen der Großkreditregelung und sind meldepflichtig nach AnaCredit.
+SELECT * FROM kredite
+		 WHERE meldepflicht = 1
+			AND kreditsumme &gt;= 1000000
+			
+</sql><sql name="Verdachtsfälle - fehlende Risikoklasse*">-- Fragestellung: Zeige alle meldepflichtigen Kredite, bei denen die Risikoklasse fehlt(z.b. NULL)
+-- Risikoklasse ist ein Pflichtfeld für aufsichtrechtliche Meldungen (z.B. IFRS 9)
+SELECT * FROM kredite 
+		 WHERE meldepflicht = 1
+			AND risikoklasse IS NULL;
+		</sql><sql name="Aufbereitung für Monatsmeldung Juni 2025*">--Fragestellung: Liste alle neuen Kredite, die im Juni 2025 vergeben wurden
+--Meldungen sind meist monatlich (z.b. &quot;Kreditvergabevolumen im Juni&quot; für Statistik Austria oder EZB)
+
+SELECT * from kredite
+		where ausgabe_datum BETWEEN '2025-06-01' AND '2025-06-30';</sql><sql name="Durchschnittszinssatz je Produktart*">--Diese Abfrage zeigt den Durchschnitsszins für jede Produktart für noch zeitlich relevante kredite
+--Für Zinsstatistiken und Margenanalysen wegen Meldepflichten oder interner Steuerung
+SELECT produktart, ROUND(avg(zinssatz),2) AS durchschnitt_zins
+FROM kredite
+WHERE faelligkeit &gt; DATE('now')
+GROUP BY produktart;</sql><sql name="Kreditvolumen pro Risikoklasse*">--Diese Abfrage zeigt das Kreditvolumen aufsummiert für jede Risikoklasse, dessen Fälligkeitsdatum noch nicht vorbei ist. 
+--Für regulatorische Zwecke (z.B. Kapitalunterlegung nach Basel 3) Risiko im Kreditbuch muss regelmäßig quantifiziert werden
+SELECT risikoklasse, SUM(kreditsumme) AS gesamtkreditvolumen
+FROM kredite
+WHERE faelligkeit &gt; DATE('now')
+GROUP BY risikoklasse
+ORDER BY risikoklasse;</sql><current_tab id="3"/></tab_sql></sqlb_project>
