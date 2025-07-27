@@ -1,0 +1,4 @@
+FehlerID,Fehlerart,Schweregrad
+F01,Formatfehler,Niedrig
+F02,Dateninkonsistenz,Hoch
+F03,Falscher Betrag,Mittel

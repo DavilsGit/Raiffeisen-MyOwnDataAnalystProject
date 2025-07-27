@@ -1,0 +1,9 @@
+MeldeID,Institut,Meldekategorie,Einreichdatum,Fristdatum,Fehleranzahl,Status
+MID001,Bank A,FINREP,2025-07-20,2025-07-21,0,Pünktlich
+MID002,Bank B,COREP,2025-07-22,2025-07-21,2,Fehlerhaft
+MID003,Bank A,FINREP,2025-07-18,2025-07-20,0,Pünktlich
+MID004,Bank C,AnaCredit,2025-07-24,2025-07-23,1,Fehlerhaft
+MID005,Bank B,FINREP,2025-07-21,2025-07-20,0,Verspätet
+MID006,Bank D,COREP,2025-07-26,2025-07-25,3,Fehlerhaft
+MID007,Bank A,AnaCredit,2025-07-27,2025-07-27,0,Pünktlich
+MID008,Bank C,AnaCredit,2025-07-23,2025-07-22,1,Fehlerhaft

@@ -1,0 +1,31 @@
+FehlerID,MeldeID,Fehlerart,Fehlertext,Schweregrad
+F001,MID007,Überschreitung,Nummer falsch formatiert,Gering
+F002,MID004,Formatfehler,Datum ungültig,Gering
+F003,MID005,Ungültiger Code,Branchencode fehlt,Gering
+F004,MID007,Plausibilitätsfehler,Branchencode fehlt,Hoch
+F005,MID003,Überschreitung,Branchencode fehlt,Gering
+F006,MID008,Ungültiger Code,Branchencode fehlt,Gering
+F007,MID005,Formatfehler,Nummer falsch formatiert,Gering
+F008,MID005,Formatfehler,Wert über Maximalgrenze,Hoch
+F009,MID007,Fehlender Wert,Feld ist leer,Gering
+F010,MID002,Fehlender Wert,Branchencode fehlt,Gering
+F011,MID003,Plausibilitätsfehler,Datum ungültig,Hoch
+F012,MID007,Ungültiger Code,Branchencode fehlt,Hoch
+F013,MID003,Ungültiger Code,Datum ungültig,Hoch
+F014,MID003,Fehlender Wert,Datum ungültig,Gering
+F015,MID008,Ungültiger Code,Branchencode fehlt,Hoch
+F016,MID005,Ungültiger Code,Nummer falsch formatiert,Hoch
+F017,MID004,Formatfehler,Datum ungültig,Gering
+F018,MID008,Fehlender Wert,Datum ungültig,Hoch
+F019,MID008,Überschreitung,Branchencode fehlt,Gering
+F020,MID003,Fehlender Wert,Datum ungültig,Mittel
+F021,MID006,Überschreitung,Datum ungültig,Hoch
+F022,MID005,Formatfehler,Branchencode fehlt,Mittel
+F023,MID002,Plausibilitätsfehler,Branchencode fehlt,Gering
+F024,MID008,Ungültiger Code,Feld ist leer,Hoch
+F025,MID004,Formatfehler,Nummer falsch formatiert,Gering
+F026,MID006,Ungültiger Code,Nummer falsch formatiert,Mittel
+F027,MID006,Plausibilitätsfehler,Datum ungültig,Gering
+F028,MID002,Plausibilitätsfehler,Nummer falsch formatiert,Hoch
+F029,MID008,Formatfehler,Datum ungültig,Hoch
+F030,MID004,Plausibilitätsfehler,Feld ist leer,Mittel
