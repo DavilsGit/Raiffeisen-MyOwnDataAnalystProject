@@ -1,0 +1,30 @@
+Datenbereinigung und -validierung
+Aufgabe: Sicherstellen, dass alle Transaktionsbeträge numerisch sind und keine ungültigen Werte enthalten. Datumsformate prüfen.
+
+Funktionen:
+
+ISTZAHL(): Prüft, ob ein Wert eine Zahl ist.
+
+ISTFEHLER() / WENNFEHLER(): Behandelt Fehler.
+
+TEXT(): Formatiert Zahlen als Text (hilfreich bei Datumsformaten).
+
+2. Datenaggregation und Berichterstattung
+Aufgabe: Summe aller meldepflichtigen Transaktionen pro Monat oder pro Produkttyp berechnen. Anzahl der Kunden pro Risikoklasse ermitteln.
+
+Funktionen:
+
+SUMMEWENN() / SUMMEWENNS(): Summiert Werte basierend auf einem oder mehreren Kriterien.
+
+ZÄHLENWENN() / ZÄHLENWENNS(): Zählt Zellen, die einem oder mehreren Kriterien entsprechen.
+
+PIVOT-TABELLEN: Ein extrem mächtiges Werkzeug zur schnellen Aggregation und Analyse großer Datenmengen.
+
+3. Datenanalyse und -filterung
+Aufgabe: Alle Transaktionen filtern, die einen bestimmten Schwellenwert überschreiten oder von einem spezifischen Kundentyp stammen.
+
+Funktionen:
+
+FILTERN: Dynamische Filterung von Daten in Excel.
+
+GROESSER.GLEICH(), KLEINER.GLEICH(): Für numerische Vergleiche in Bedingungen.
